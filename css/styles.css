@@ -1,0 +1,142 @@
+.conatiner {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.chats-left {
+  height: 100vh;
+}
+
+.chats-left__menu {
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/menu.svg");
+  background-repeat: no-repeat;
+}
+
+.chats-left__lock {
+  width: 24px;
+  height: 24px;
+  background-image: url("../img/lock-open.svg");
+  background-repeat: no-repeat;
+}
+
+
+.list-group-item{
+  padding: 0;
+}
+
+.chats__title::before {
+  display: block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/bot-icon.svg");
+  background-repeat: no-repeat;
+  margin-right: 6px;
+}
+
+.chats__title--group::before {
+  background-image: url("../img/group-icon.svg");
+}
+
+.chats__title--chanel::before {
+  background-image: url("../img/cahnel-icon.svg");
+}
+
+.your__message {
+  display: block;
+  max-width: 220px;
+}
+
+time {
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.modal-dialog {
+  max-width: 330px;
+  margin: 0;
+}
+
+.modal-header {
+  background-image: url("../img/tg-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: contrast(0.7);
+}
+
+.arrow__bottom {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-image: url("../img/arrov-bottom-white.svg");
+  background-repeat: no-repeat;
+}
+
+.sitebar::before {
+  display: block;
+  content: "";
+  width: 22px;
+  height: 22px;
+  background-image: url("../img/group-icon.svg");
+  background-repeat: no-repeat;
+  margin-right: 12px;
+}
+
+.sitebar--chanel::before {
+  background-image: url("../img/cahnel-icon.svg");
+}
+
+.sitebar--contact::before {
+  background-image: url("../img/user-icon.svg");
+}
+
+.sitebar--call::before {
+  background-image: url("../img/phone-icon.svg");
+}
+
+.sitebar--setting::before {
+  background-image: url("../img/settings-icon.svg");
+}
+
+.sitebar--mode::before {
+  background-image: url("../img/moon-icon.svg");
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 1px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #adadad;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #adadad;
+}
+
+.modal.fade .modal-dialog {
+  transform: translateX(-1000px)
+}
+
+.modal.fade.show .modal-dialog {
+  transform: translateX(0);
+}
+
+.modal-dialog {
+  margin: 0 !important;
+}
+

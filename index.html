@@ -10,10 +10,219 @@
 </head>
 <body>
 
-</body>
+  <div class="conatiner">
+    <div class="row">
+      <div class="col-3 p-0">
+        <div class="chats-left">
+          <div class="chats-left__top pt-2">
+            <div class="chats-left__wrapper d-flex align-items-center justify-content-between">
+              <button class="chats-left__menu btn mr-4" aria-hidden="True" data-toggle="modal" data-target="#exampleModal" type="button"></button>
+              <form action="https://htmlacademy.ru" method="GET">
+                <div class="form-group mb-0 w-100">
+                  <input class="form-control border-0 rounded bg-light p-2 mr-5" type="search" name="search_chats" placeholder="Search">
+                </div>
+              </form>
+              <button class="chats-left__lock btn ml-4" aria-hidden="true" data-target="#modalOpen" data-toggle="modal"></button>
+            </div>
+          </div>
+
+          <div class="chats mt-4 vh-100 overflow-auto">
+            <div class="list-group">
+              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
+                  <div class="d-flex">
+                  <img class="bg-primary rounded-pill p-2 mr-2" src="img/saved-meassagw-white.svg" alt="saved-massage" width="48" height="48">
+                  <div class="chats__content d-flex flex-row justify-content-between w-100">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h2 class="h6 font-weight-bold mb-0">Saved Message</h2>
+                    <span class="d-inline-flex text-primary">You:<span class="your__message text-secondary text-truncate">a keldi rasm</span></span>
+                  </div>
+                  <div class="d-flex flex-column align-items-end justify-content-between">
+                    <div class="d-flex align-items-center">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 0 24 24" width="22px" fill="#4EFC42"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"/></svg>
+                      </span>
+                    <time class="ml-1" datetime="2020.3.12">9:30 AM</time>
+                    </div>
+                    <img class="d-block" src="img/pin-icon.svg" alt="pinned chats" width="14" height="14">
+                  </div>
+                  </div>
+                </div>
+                </a>
+
+              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
+                  <div class="d-flex">
+                  <img class="rounded-pill mr-2" src="img/photo_2019-05-14_20-42-16.png" alt="saved-massage" width="50" height="50">
+                  <div class="chats__content d-flex flex-row justify-content-between w-100">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h2 class="chats__title h6 font-weight-bold mb-0 d-flex align-items-center">Audio converter</h2>
+                    <span class="d-inline-flex text-primary">You:<span class="your__message text-secondary text-truncate">buttonlarnia keldi rasm Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga facere voluptatum corrupti voluptas iusto asperiores, saepe quidem aperiam ullam architecto.</span></span>
+                  </div>
+                  <div class="d-flex flex-column align-items-end justify-content-between">
+                    <time datetime="2020.3.12">Tue</time>
+                    <img class="d-block" src="img/pin-icon.svg" alt="pinned chats" width="14" height="14">
+                  </div>
+                  </div>
+                </div>
+                </a>
+
+              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
+                  <div class="d-flex">
+                  <img class="rounded-pill mr-2" src="img/kitaabun.png" alt="saved-massage" width="50" height="50">
+                  <div class="chats__content d-flex flex-row justify-content-between w-100">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h2 class="chats__title chats__title--chanel h6 font-weight-bold mb-0 d-flex align-items-center">Китоб – илм манбаи</h2>
+                    <span class="d-inline-flex text-primary"><span class="your__message text-secondary text-truncate">3-савол: Пайғамбаримиз соллаллоҳу алайҳи ва салламга турмушга чиқишидан олдин уч марта бева бўлган мўминлар онаси ким?
+
+                      Жавобни изоҳда қолдиринг. Китобдан, интернетдан бировнинг ёрдамидан фойдаланиш мумкин эмас.</span></span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-between">
+                    <time datetime="2020.3.12">7:12PM</time>
+                  </div>
+                  </div>
+                </div>
+                </a>
+
+              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
+                  <div class="d-flex">
+                  <img class="rounded-pill mr-2" src="img/frontent-group.png" alt="saved-massage" width="50" height="50">
+                  <div class="chats__content d-flex flex-row justify-content-between w-100">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h2 class="chats__title chats__title--group h6 font-weight-bold mb-0 d-flex align-items-center">Frontend - bootcamp |9:00|</h2>
+                    <span class="d-inline-flex text-primary">You:<span class="your__message text-secondary text-truncate">image_2021-08-45-65-75.png</span></span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-between">
+                    <time datetime="2020.3.12">02.08.21</time>
+                  </div>
+                  </div>
+                </div>
+                </a>
+
+              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
+                  <div class="d-flex">
+                  <img class="bg-success rounded-pill mr-2" width="50" height="50">
+                  <div class="chats__content d-flex flex-row justify-content-between w-100">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h2 class="chats__title chats__title--group h6 font-weight-bold mb-0 d-flex align-items-center">MohirDev.uz - Onlayn</h2>
+                    <span class="d-inline-flex text-primary">Jahongir:<span class="your__message text-secondary text-truncate">Togrisidan biron br ishga...</span></span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-between">
+                    <time datetime="2020.3.12">Wend</time>
+                    <span class="badge badge-secondary rounded-pill px-2">68</span>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+                </a>
+
+              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
+                  <div class="d-flex">
+                  <img class="bg-success rounded-pill mr-2" src="img/ulugbek-chanel.png" width="50" height="50">
+                  <div class="chats__content d-flex flex-row justify-content-between w-100">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h2 class="chats__title chats__title--chanel h6 font-weight-bold mb-0 d-flex align-items-center">Ulugbek Samigjanov</h2>
+                    <span class="d-inline-flex text-primary"><span class="your__message text-secondary text-truncate">Dars davomida o’tilgan material.</span></span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-between">
+                    <time datetime="2020.3.12">13:23 AM</time>
+                  </div>
+                  </div>
+                </div>
+                </a>
+
+              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
+                  <div class="d-flex">
+                  <img class="bg-success rounded-pill mr-2" src="img/azon-tv.png" width="50" height="50">
+                  <div class="chats__content d-flex flex-row justify-content-between w-100">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h2 class="chats__title chats__title--chanel h6 font-weight-bold mb-0 d-flex align-items-center">AzonTV | Расмий канал</h2>
+                    <span class="d-inline-flex text-primary">Видео,<span class="your__message text-secondary text-truncate">#сериал #Юнус_Эмро
+                      Сен менинг яратилишимга боқма, балки ҳимматимдаги юксакликка қара...</span></span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-between">
+                    <time datetime="2020.3.12">Yes</time>
+                    <span class="badge badge-secondary rounded-pill px-2">29</span>
+                  </div>
+                  </div>
+                </div>
+                </a>
+
+              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
+                  <div class="d-flex">
+                  <img class="bg-success rounded-pill mr-2" src="img/sunny.jpg" width="50" height="50">
+                  <div class="chats__content d-flex flex-row justify-content-between w-100">
+                  <div class="d-flex flex-column justify-content-between">
+                    <h2 class="chats__title chats__title--bot h6 font-weight-bold mb-0 d-flex align-items-center">Pogoda.uz</h2>
+                    <span class="d-inline-flex text-primary">Bugun,<span class="your__message text-secondary text-truncate">19 avgust
+                      ☀️ +35°...+20°, Ochiq havo
+
+                      Hozir: ☀️ +19°, ⬅️ 8 m/s
+
+                      Tong: ☀️ +25°
+                      Kun: ☀️ +33°
+                      Oqshom: ☀️ +33°
+                      .</span></span>
+                  </div>
+                  <div class="d-flex flex-column align-items-center justify-content-between">
+                    <time datetime="2020.3.12">5:05AM</time>
+                  </div>
+                  </div>
+                </div>
+                </a>
+
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-6 bg-primary"></div>
+      <div class="col-3 bg-warning"></div>
+
+    </div>
+  </div>
+
+  <div class="modal fade show" id="exampleModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="d-flex flex-column">
+            <img class="d-block rounded-pill" src="img/my-img.png" alt="my img" width="50" height="50">
+          <h3 class="h6 text-white mb-0 mt-3">Sarvar</h3>
+          <p class="mb-0 text-white">+998909113818</p>
+          </div>
+          <div class="d-flex flex-column justify-content-between align-items-center">
+            <img class="bg-dark rounded-pill p-2" src="img/saved-meassagw-white.svg" alt="saved message" width="40" height="40">
+            <button class="arrow__bottom btn mt-4" aria-hidden="true"></button>
+          </div>
+        </div>
+        <div class="modal-body border-0 vh-100">
+          <div class="list-group">
+            <a href="#" class="sitebar list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center" aria-current="true">New Group</a>
+            <a href="#" class="sitebar sitebar--chanel list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">New Chanel</a>
+            <a href="#" class="sitebar sitebar--contact list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">Contact</a>
+            <a href="#" class="sitebar sitebar--call list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">Calls</a>
+            <a href="#" class="sitebar sitebar--setting list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">Settings</a>
+
+            <div class="d-flex align-items-center">
+              <a href="#" class="sitebar sitebar--mode list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">Night Mode</a>
+            <div class="custom-control custom-switch">
+              <input type="checkbox" class="custom-control-input" id="customSwitch1">
+              <label class="custom-control-label" for="customSwitch1"></label>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <p class="mb-0 text-secondary">Telegram desktop</p>
+          <p class="text-secondary">Version 2.9.2 x64 - About</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 </body>
-
 </html>
