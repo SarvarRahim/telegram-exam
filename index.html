@@ -4,183 +4,858 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Countries</title>
+  <title>Telegram</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body class="">
 
-  <div class="conatiner">
-    <div class="row">
-      <div class="col-3 p-0">
-        <div class="chats-left">
-          <div class="chats-left__top pt-2">
-            <div class="chats-left__wrapper d-flex align-items-center justify-content-between">
-              <button class="chats-left__menu btn mr-4" aria-hidden="True" data-toggle="modal" data-target="#exampleModal" type="button"></button>
-              <form action="https://htmlacademy.ru" method="GET">
-                <div class="form-group mb-0 w-100">
-                  <input class="form-control border-0 rounded bg-light p-2 mr-5" type="search" name="search_chats" placeholder="Search">
-                </div>
-              </form>
-              <button class="chats-left__lock btn ml-4" aria-hidden="true" data-target="#modalOpen" data-toggle="modal"></button>
-            </div>
-          </div>
-
-          <div class="chats mt-4 vh-100 overflow-auto">
-            <div class="list-group">
-              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
-                  <div class="d-flex">
-                  <img class="bg-primary rounded-pill p-2 mr-2" src="img/saved-meassagw-white.svg" alt="saved-massage" width="48" height="48">
-                  <div class="chats__content d-flex flex-row justify-content-between w-100">
-                  <div class="d-flex flex-column justify-content-between">
-                    <h2 class="h6 font-weight-bold mb-0">Saved Message</h2>
-                    <span class="d-inline-flex text-primary">You:<span class="your__message text-secondary text-truncate">a keldi rasm</span></span>
+  <main class="vh-100">
+    <div class="conatiner">
+      <div class="row">
+        <div class="header col-3 p-0">
+          <div class="chats-left border-right">
+            <div class="chats-left__top pt-2">
+              <div class="chats-left__wrapper d-flex align-items-center justify-content-between">
+                <button class="chats-left__menu btn mr-4" aria-hidden="True" data-toggle="modal" data-target="#exampleModal" type="button"></button>
+                <form action="https://htmlacademy.ru" method="GET">
+                  <div class="form-group mb-0 w-100" id="search-box">
+                    <input class="form-control border-0 rounded bg-light p-2 mr-5" type="search" name="search_chats" placeholder="Search">
                   </div>
-                  <div class="d-flex flex-column align-items-end justify-content-between">
-                    <div class="d-flex align-items-center">
-                      <span>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 0 24 24" width="22px" fill="#4EFC42"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"/></svg>
-                      </span>
-                    <time class="ml-1" datetime="2020.3.12">9:30 AM</time>
+                </form>
+                <button class="chats-left__lock btn ml-4" aria-hidden="true" data-target="#modalOpen" data-toggle="modal"></button>
+              </div>
+            </div>
+
+            <div class="chats mt-4 vh-100 overflow-auto">
+              <div class="list-group" id="list-tab" role="tablist">
+                <a class="list-group-item list-group-item-action active py-2 pr-2 border-0 mb-2" data-toggle="list" href="#list-content" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="bg-primary rounded-pill p-2 mr-2" src="img/saved-meassagw-white.svg" alt="saved-massage" width="48" height="48">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="h6 font-weight-bold mb-0">Saved Message</h2>
+                      <span class="chats__text d-inline-flex">You:<span class="your__message text-truncate text-dark ml-1">a keldi rasm</span></span>
                     </div>
-                    <img class="d-block" src="img/pin-icon.svg" alt="pinned chats" width="14" height="14">
+                    <div class="d-flex flex-column align-items-end justify-content-between">
+                      <div class="d-flex align-items-center">
+                        <span>
+                          <svg xmlns="http://www.w3.org/2000/svg" height="22px" viewBox="0 0 24 24" width="22px" fill="#4EFC42"><path d="M0 0h24v24H0z" fill="none"/><path d="M18 7l-1.41-1.41-6.34 6.34 1.41 1.41L18 7zm4.24-1.41L11.66 16.17 7.48 12l-1.41 1.41L11.66 19l12-12-1.42-1.41zM.41 13.41L6 19l1.41-1.41L1.83 12 .41 13.41z"/></svg>
+                        </span>
+                      <time class="ml-1" datetime="2020.3.12">9:30 AM</time>
+                      </div>
+                      <img class="d-block" src="img/pin-icon.svg" alt="pinned chats" width="14" height="14">
+                    </div>
+                    </div>
                   </div>
+                  </a>
+
+                <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="list" href="#bot" aria-current="false" role="tab">
+                    <div class="d-flex">
+                    <img class="rounded-pill mr-2" src="img/photo_2019-05-14_20-42-16.png" alt="saved-massage" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title h6 font-weight-bold mb-0 d-flex align-items-center">Audio converter</h2>
+                      <span class="chats__text d-inline-flex text-primary">You:<span class="your__message text-secondary text-truncate ml-1">buttonlarnia keldi rasm Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga facere voluptatum corrupti voluptas iusto asperiores, saepe quidem aperiam ullam architecto.</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-end justify-content-between">
+                      <time datetime="2020.3.12">Tue</time>
+                      <img class="d-block" src="img/pin-icon.svg" alt="pinned chats" width="14" height="14">
+                    </div>
+                    </div>
                   </div>
+                  </a>
+
+                <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="tab" href="#list-content3" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="rounded-pill mr-2" src="img/kitaabun.png" alt="saved-massage" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title chats__title--chanel h6 font-weight-bold mb-0 d-flex align-items-center">Китоб – илм манбаи</h2>
+                      <span class="chats__text d-inline-flex text-primary"><span class="your__message text-secondary text-truncate ml-1">3-савол: Пайғамбаримиз соллаллоҳу алайҳи ва салламга турмушга чиқишидан олдин уч марта бева бўлган мўминлар онаси ким?
+
+                        Жавобни изоҳда қолдиринг. Китобдан, интернетдан бировнинг ёрдамидан фойдаланиш мумкин эмас.</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                      <time datetime="2020.3.12">7:12PM</time>
+                    </div>
+                    </div>
+                  </div>
+                  </a>
+
+                <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="tab" href="#list-content4" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="rounded-pill mr-2" src="img/frontent-group.png" alt="saved-massage" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title chats__title--group h6 font-weight-bold mb-0 d-flex align-items-center">Frontend - bootcamp |9:00|</h2>
+                      <span class="chats__text d-inline-flex text-primary">You:<span class="your__message text-secondary text-truncate ml-1">image_2021-08-45-65-75.png</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                      <time datetime="2020.3.12">02.08.21</time>
+                    </div>
+                    </div>
+                  </div>
+                  </a>
+
+                <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="tab" href="#list-content5" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="bg-success rounded-pill mr-2" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title chats__title--group h6 font-weight-bold mb-0 d-flex align-items-center">MohirDev.uz - Onlayn</h2>
+                      <span class="chats__text d-inline-flex text-primary">Jahongir:<span class="your__message text-secondary text-truncate ml-1">Togrisidan biron br ishga...</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                      <time datetime="2020.3.12">Wend</time>
+                      <span class="badge badge-secondary rounded-pill px-2">68</span>
+                    </div>
+                    </div>
+                    </div>
+
+                  </a>
+
+                <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="tab" href="#list-content6" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="bg-success rounded-pill mr-2" src="img/ulugbek-chanel.png" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title chats__title--chanel h6 font-weight-bold mb-0 d-flex align-items-center">Ulugbek Samigjanov</h2>
+                      <span class="chats__text d-inline-flex text-primary"><span class="your__message text-secondary text-truncate ml-1">Dars davomida o’tilgan material.</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                      <time datetime="2020.3.12">13:23 AM</time>
+                    </div>
+                    </div>
+                  </div>
+                  </a>
+
+                <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="tab" href="#list-content7" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="bg-success rounded-pill mr-2" src="img/azon-tv.png" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title chats__title--chanel h6 font-weight-bold mb-0 d-flex align-items-center">AzonTV | Расмий канал</h2>
+                      <span class="chats__text d-inline-flex text-primary">Видео,<span class="your__message text-secondary text-truncate ml-1">#сериал #Юнус_Эмро
+                        Сен менинг яратилишимга боқма, балки ҳимматимдаги юксакликка қара...</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                      <time datetime="2020.3.12">Yes</time>
+                      <span class="badge badge-secondary rounded-pill px-2">29</span>
+                    </div>
+                    </div>
+                  </div>
+                  </a>
+
+                <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="tab" href="#list-content8" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="bg-success rounded-pill mr-2" src="img/sunny.jpg" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title chats__title--bot h6 font-weight-bold mb-0 d-flex align-items-center">Pogoda.uz</h2>
+                      <span class="chats__text d-inline-flex text-primary">Bugun,<span class="your__message text-secondary text-truncate ml-1">19 avgust
+                        ☀️ +35°...+20°, Ochiq havo
+
+                        Hozir: ☀️ +19°, ⬅️ 8 m/s
+
+                        Tong: ☀️ +25°
+                        Kun: ☀️ +33°
+                        Oqshom: ☀️ +33°
+                        .</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                      <time datetime="2020.3.12">5:05AM</time>
+                    </div>
+                    </div>
+                  </div>
+                  </a>
+
+                  <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="tab" href="#list-content9" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="bg-success rounded-pill mr-2" src="img/uzkiy.jpg" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title chats__title--group h6 font-weight-bold mb-0 d-flex align-items-center">Uzkiy krug</h2>
+                      <span class="chats__text d-inline-flex text-primary">Ibrohimaka:<span class="your__message text-secondary text-truncate ml-1">poisk search ga otqazvorishi kere chap tarafdigi voice chatda modal chiqadi uch nuqtada dropdown</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                      <time datetime="2020.3.12">Yes</time>
+
+                    </div>
+                    </div>
+                  </div>
+                  </a>
+
+                  <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="tab" href="#list-content10" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="bg-success rounded-pill mr-2" src="img/uzkiy.jpg" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title chats__title--group h6 font-weight-bold mb-0 d-flex align-items-center">Uzkiy krug</h2>
+                      <span class="chats__text d-inline-flex text-primary">Ibrohimaka:<span class="your__message text-secondary text-truncate ml-1">poisk search ga otqazvorishi kere chap tarafdigi voice chatda modal chiqadi uch nuqtada dropdown</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                      <time datetime="2020.3.12">Yes</time>
+
+                    </div>
+                    </div>
+                  </div>
+                  </a>
+
+                  <a class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" data-toggle="tab" href="#list-content10" aria-current="true" role="tab">
+                    <div class="d-flex">
+                    <img class="bg-success rounded-pill mr-2" src="img/uzkiy.jpg" width="50" height="50">
+                    <div class="chats__content d-flex flex-row justify-content-between w-100">
+                    <div class="d-flex flex-column justify-content-between">
+                      <h2 class="chats__title chats__title--group h6 font-weight-bold mb-0 d-flex align-items-center">Uzkiy krug</h2>
+                      <span class="chats__text d-inline-flex text-primary">Ibrohimaka:<span class="your__message text-secondary text-truncate ml-1">poisk search ga otqazvorishi kere chap tarafdigi voice chatda modal chiqadi uch nuqtada dropdown</span></span>
+                    </div>
+                    <div class="d-flex flex-column align-items-center justify-content-between">
+                      <time datetime="2020.3.12">Yes</time>
+
+                    </div>
+                    </div>
+                  </div>
+                  </a>
+
                 </div>
-                </a>
-
-              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
-                  <div class="d-flex">
-                  <img class="rounded-pill mr-2" src="img/photo_2019-05-14_20-42-16.png" alt="saved-massage" width="50" height="50">
-                  <div class="chats__content d-flex flex-row justify-content-between w-100">
-                  <div class="d-flex flex-column justify-content-between">
-                    <h2 class="chats__title h6 font-weight-bold mb-0 d-flex align-items-center">Audio converter</h2>
-                    <span class="d-inline-flex text-primary">You:<span class="your__message text-secondary text-truncate">buttonlarnia keldi rasm Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga facere voluptatum corrupti voluptas iusto asperiores, saepe quidem aperiam ullam architecto.</span></span>
-                  </div>
-                  <div class="d-flex flex-column align-items-end justify-content-between">
-                    <time datetime="2020.3.12">Tue</time>
-                    <img class="d-block" src="img/pin-icon.svg" alt="pinned chats" width="14" height="14">
-                  </div>
-                  </div>
-                </div>
-                </a>
-
-              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
-                  <div class="d-flex">
-                  <img class="rounded-pill mr-2" src="img/kitaabun.png" alt="saved-massage" width="50" height="50">
-                  <div class="chats__content d-flex flex-row justify-content-between w-100">
-                  <div class="d-flex flex-column justify-content-between">
-                    <h2 class="chats__title chats__title--chanel h6 font-weight-bold mb-0 d-flex align-items-center">Китоб – илм манбаи</h2>
-                    <span class="d-inline-flex text-primary"><span class="your__message text-secondary text-truncate">3-савол: Пайғамбаримиз соллаллоҳу алайҳи ва салламга турмушга чиқишидан олдин уч марта бева бўлган мўминлар онаси ким?
-
-                      Жавобни изоҳда қолдиринг. Китобдан, интернетдан бировнинг ёрдамидан фойдаланиш мумкин эмас.</span></span>
-                  </div>
-                  <div class="d-flex flex-column align-items-center justify-content-between">
-                    <time datetime="2020.3.12">7:12PM</time>
-                  </div>
-                  </div>
-                </div>
-                </a>
-
-              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
-                  <div class="d-flex">
-                  <img class="rounded-pill mr-2" src="img/frontent-group.png" alt="saved-massage" width="50" height="50">
-                  <div class="chats__content d-flex flex-row justify-content-between w-100">
-                  <div class="d-flex flex-column justify-content-between">
-                    <h2 class="chats__title chats__title--group h6 font-weight-bold mb-0 d-flex align-items-center">Frontend - bootcamp |9:00|</h2>
-                    <span class="d-inline-flex text-primary">You:<span class="your__message text-secondary text-truncate">image_2021-08-45-65-75.png</span></span>
-                  </div>
-                  <div class="d-flex flex-column align-items-center justify-content-between">
-                    <time datetime="2020.3.12">02.08.21</time>
-                  </div>
-                  </div>
-                </div>
-                </a>
-
-              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
-                  <div class="d-flex">
-                  <img class="bg-success rounded-pill mr-2" width="50" height="50">
-                  <div class="chats__content d-flex flex-row justify-content-between w-100">
-                  <div class="d-flex flex-column justify-content-between">
-                    <h2 class="chats__title chats__title--group h6 font-weight-bold mb-0 d-flex align-items-center">MohirDev.uz - Onlayn</h2>
-                    <span class="d-inline-flex text-primary">Jahongir:<span class="your__message text-secondary text-truncate">Togrisidan biron br ishga...</span></span>
-                  </div>
-                  <div class="d-flex flex-column align-items-center justify-content-between">
-                    <time datetime="2020.3.12">Wend</time>
-                    <span class="badge badge-secondary rounded-pill px-2">68</span>
-                  </div>
-                  </div>
-                  </div>
-                </div>
-                </a>
-
-              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
-                  <div class="d-flex">
-                  <img class="bg-success rounded-pill mr-2" src="img/ulugbek-chanel.png" width="50" height="50">
-                  <div class="chats__content d-flex flex-row justify-content-between w-100">
-                  <div class="d-flex flex-column justify-content-between">
-                    <h2 class="chats__title chats__title--chanel h6 font-weight-bold mb-0 d-flex align-items-center">Ulugbek Samigjanov</h2>
-                    <span class="d-inline-flex text-primary"><span class="your__message text-secondary text-truncate">Dars davomida o’tilgan material.</span></span>
-                  </div>
-                  <div class="d-flex flex-column align-items-center justify-content-between">
-                    <time datetime="2020.3.12">13:23 AM</time>
-                  </div>
-                  </div>
-                </div>
-                </a>
-
-              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
-                  <div class="d-flex">
-                  <img class="bg-success rounded-pill mr-2" src="img/azon-tv.png" width="50" height="50">
-                  <div class="chats__content d-flex flex-row justify-content-between w-100">
-                  <div class="d-flex flex-column justify-content-between">
-                    <h2 class="chats__title chats__title--chanel h6 font-weight-bold mb-0 d-flex align-items-center">AzonTV | Расмий канал</h2>
-                    <span class="d-inline-flex text-primary">Видео,<span class="your__message text-secondary text-truncate">#сериал #Юнус_Эмро
-                      Сен менинг яратилишимга боқма, балки ҳимматимдаги юксакликка қара...</span></span>
-                  </div>
-                  <div class="d-flex flex-column align-items-center justify-content-between">
-                    <time datetime="2020.3.12">Yes</time>
-                    <span class="badge badge-secondary rounded-pill px-2">29</span>
-                  </div>
-                  </div>
-                </div>
-                </a>
-
-              <a href="#" class="list-group-item list-group-item-action py-2 pr-2 border-0 mb-2" aria-current="true">
-                  <div class="d-flex">
-                  <img class="bg-success rounded-pill mr-2" src="img/sunny.jpg" width="50" height="50">
-                  <div class="chats__content d-flex flex-row justify-content-between w-100">
-                  <div class="d-flex flex-column justify-content-between">
-                    <h2 class="chats__title chats__title--bot h6 font-weight-bold mb-0 d-flex align-items-center">Pogoda.uz</h2>
-                    <span class="d-inline-flex text-primary">Bugun,<span class="your__message text-secondary text-truncate">19 avgust
-                      ☀️ +35°...+20°, Ochiq havo
-
-                      Hozir: ☀️ +19°, ⬅️ 8 m/s
-
-                      Tong: ☀️ +25°
-                      Kun: ☀️ +33°
-                      Oqshom: ☀️ +33°
-                      .</span></span>
-                  </div>
-                  <div class="d-flex flex-column align-items-center justify-content-between">
-                    <time datetime="2020.3.12">5:05AM</time>
-                  </div>
-                  </div>
-                </div>
-                </a>
 
 
-
+              </div>
             </div>
           </div>
-        </div>
+
+
+        <div class="col-6 p-0">
+          <!-- <h1 class="sr-only">Telegram chat</h1> -->
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane show active" id="list-content" role="tabpanel">
+              <div class="chat-center">
+                <div class="chat-center___top px-3  py-2 border-bottom position-relative flex-grow-1">
+                  <a class="text-decoration-none text-dark stretched-link" href="#infoModal" data-toggle="modal">
+                    <div class="d-flex align-items-center justify-content-between">
+                      <div class="chat-center__name">
+                        <h2 class="chat-center__title h5 mb-0">Frontend Bootcamp N1 |9:00| #nt044</h2>
+                        <span class="text-secondary">21 members</span>
+                      </div>
+                    </a>
+                      <div class="chat-center__icons d-flex align-items-baseline">
+                        <button class="chat-center__btn--search btn mr-2" aria-hidden="true" data-target="#search-box"></button>
+                        <button class="chat-center__btn--info btn mr-2" aria-hidden="true"></button>
+                        <div class="dropdown">
+                          <button class="chat-center__btn--doted btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+                          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Share this contact</a>
+                            <a class="dropdown-item" href="#">View group info</a>
+                            <a class="dropdown-item" href="#">Export chat history</a>
+                            <a class="dropdown-item" href="#">Dalete chat</a>
+                            <a class="dropdown-item" href="#">Report</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="chat-body vh-100 overflow-auto">
+                    <div class="pinned-message position-absolute bg-white py-1 px-3">
+                      <div class="d-flex align-items-center justify-content-between">
+                        <div class="d-block">
+                          <a class="" href="#">Pinned message</a>
+                      <p class="pinned-message__text text-truncate mb-0">80-dars - 20.08.2021
+                        Bootstrap 4 dan Imtihon
+                        1. Chatlar - 19.08.2021 - 15:00-15:15 ZIP
+                        - oddiy chat, kanal, bot, guruh
+                        2. Chat - 20.08.2021 - 18:00-18:15 ZIP
+                        3. Emoji/stickerlar - 21.08.2021 - 18:00-18:15 GitHub/Netlify</p>
+                        </div>
+                        <button class="btn">
+                          <img src="img/pin-drop-icon.svg" alt="" width="25" height="25">
+                        </button>
+                      </div>
+                    </div>
+
+                    <div class="chats-all px-3">
+                        <div class="chat-all__left d-flex align-items-end">
+                          <img class="rounded-circle" src="img/nurmuhammadaka-img.jpg" alt="aka Nurmuhammad" width="35" height="35">
+                          <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                            <h3 class="chat-all__write-name  h6 mb-0 text-success">Nurmuhammad aka NT</h3>
+                            <div class="d-flex align-items-end justify-content-between w-100">
+                              <p class="chat-all__write-text mb-0 pt-1">Abetga nima oqat</p>
+                              <time class="chat__time ml-5">11:37</time>
+                            </div>
+                            <span class="triangle position-absolute"></span>
+                        </div>
+                      </div>
+
+                        <div class="chat-all__left d-flex align-items-end mt-2">
+                          <!-- <img class="rounded-circle" src="img/bey.img" alt="Bey aka" width="35" height="35">
+                            -->
+                          <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                            <!-- <h3 class="chat-all__write-name  h6 mb-0 text-primary">Asadbek aka NT</h3> -->
+                            <div class="d-flex align-items-end justify-content-between w-100">
+                              <p class="chat-all__write-text mb-0">ovqat yemimiz bugun</p>
+                            <time class="chat__time ml-5">11:37</time>
+                            </div>
+                            <span class="triangle position-absolute"></span>
+                        </div>
+                      </div>
+
+                      <div class="chat-all__left d-flex align-items-end mt-2">
+                        <img class="rounded-circle" src="img/nurmuhammadaka-img.jpg" alt="aka Nurmuhammad" width="35" height="35">
+                        <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                          <h3 class="chat-all__write-name  h6 mb-0 text-success">Nurmuhammad aka NT</h3>
+                          <div class="d-flex align-items-end justify-content-between w-100">
+                            <p class="chat-all__write-text mb-0 pt-1">yemisizmi</p>
+                          <time class="chat__time ml-5">11:38</time>
+                          </div>
+                          <span class="triangle position-absolute"></span>
+                      </div>
+                    </div>
+
+                      <div class="chat-all__left d-flex align-items-end mt-2">
+                        <!-- <img class="rounded-circle" src="img/ibrohimaka-img.jpg" alt="Ibrohim aka" width="35" height="35"> -->
+                        <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                          <!-- <h3 class="chat-all__write-name  h6 mb-0 text-success">Ibrohim aka NT</h3> -->
+                          <div class="d-flex align-items-end justify-content-between w-100">
+                            <p class="chat-all__write-text mb-0">poll qivorin</p>
+                          <time class="chat__time ml-5">11:37</time>
+                          </div>
+                          <span class="triangle position-absolute"></span>
+                      </div>
+                    </div>
+
+                      <div class="chat-all__left d-flex align-items-end mt-2">
+                        <img class="rounded-circle" src="img/nurmuhammadaka-img.jpg" alt="Nurmuhammad aka" width="35" height="35">
+                        <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                          <h3 class="chat-all__write-name  h6 mb-0 text-success">Nurmuhammad aka NT</h3>
+                          <div class="d-flex flex-column w-100">
+                            <p class="chat-all__write-text mb-0 pt-1 font-weight-bold">Niima yeymiz?</p>
+                            <span class="poll text-secondary mb-2">Анонимный опрос</span>
+                          </div>
+                          <span>0% Perashka</span>
+                          <div class="poll__reting mb-2"></div>
+                          <span>33% Makrodan ubu narsa</span>
+                          <div class="poll__reting poll__reting--two mb-2"></div>
+                          <span>0% Ikra</span>
+                          <div class="poll__reting mb-2"></div>
+                          <span>33% Zakaz qivoramiza ubu nma</span>
+                          <div class="poll__reting poll__reting--two mb-2"></div>
+                          <span>33% Non suvga botirib</span>
+                          <div class="poll__reting poll__reting--three mb-2"></div>
+                          <div class="d-flex align-items-center justify-content-between">
+                            <span class="text-secondary">3 голоса</span>
+                            <time class="chat__time ml-5">11:43</time>
+                          </div>
+                          <span class="triangle position-absolute"></span>
+                      </div>
+                    </div>
+
+                    <div class="chat-all__left d-flex align-items-end mt-2">
+                      <!-- <img class="rounded-circle" src="img/ibrohimaka-img.jpg" alt="Ibrohim aka" width="35" height="35"> -->
+                      <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                        <!-- <h3 class="chat-all__write-name  h6 mb-0 text-success">Ibrohim aka NT</h3> -->
+                        <div class="d-flex align-items-end justify-content-between w-100">
+                          <p class="chat-all__write-text mb-0">......</p>
+                        <time class="chat__time ml-5">11:37</time>
+                        </div>
+                        <span class="triangle position-absolute"></span>
+                    </div>
+                  </div>
+
+                  <div class="chat-all__left d-flex align-items-end mt-2">
+                    <img class="rounded-circle" src="img/bey.img" alt="aka Nurmuhammad" width="35" height="35">
+                    <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                      <h3 class="chat-all__write-name  h6 mb-0 text-primary">Asadbek aka NT</h3>
+                      <div class="d-flex align-items-end justify-content-between w-100">
+                        <p class="chat-all__write-text mb-0 pt-1">Ikraga nima disla</p>
+                      <time class="chat__time ml-5">11:38</time>
+                      </div>
+                      <span class="triangle position-absolute"></span>
+                  </div>
+                </div>
+
+                  <div class="chat-all__left d-flex align-items-end mt-2">
+                    <!-- <img class="rounded-circle" src="img/bey.img" alt="aka Nurmuhammad" width="35" height="35"> -->
+                    <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                      <!-- <h3 class="chat-all__write-name  h6 mb-0 text-primary">Asadbek aka NT</h3> -->
+                      <div class="d-flex align-items-end justify-content-between w-100">
+                        <p class="chat-all__write-text mb-0 pt-1">Lorem ipsum dolor sit.</p>
+                      <time class="chat__time ml-5">11:38</time>
+                      </div>
+                      <span class="triangle position-absolute"></span>
+                  </div>
+                </div>
+
+                <div class="chat-all__left d-flex align-items-end mt-2">
+                  <img class="rounded-circle" src="img/ibrohimaka-img.jpg" alt="aka Ibrohim" width="35" height="35">
+                  <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                    <h3 class="chat-all__write-name  h6 mb-0 text-danger">Ibrohim aka NT</h3>
+                    <div class="d-flex align-items-end justify-content-between w-100">
+                      <p class="chat-all__write-text mb-0 pt-1">Nechida chiqamiz</p>
+                    <time class="chat__time ml-5">11:38</time>
+                    </div>
+                    <span class="triangle position-absolute"></span>
+                </div>
+              </div>
+
+                <div class="chat-all__left d-flex align-items-end mt-2">
+                  <!-- <img class="rounded-circle" src="img/ibrohimaka-img.jpg" alt="aka Ibrohim" width="35" height="35"> -->
+                  <div class="chat-all__write bg-white rounded ml-2 position-relative">
+                    <img class="img-fluid" src="img/gif-send.jpg" alt="GIF" width="200" height="200">
+                    <!-- <h3 class="chat-all__write-name  h6 mb-0 text-danger">Ibrohim aka NT</h3> -->
+                    <div class="d-flex align-items-end justify-content-between w-100">
+                    <!-- <time class="chat__time ml-5 ml-auto">11:38</time> -->
+                    </div>
+                    <span class="triangle position-absolute"></span>
+                </div>
+              </div>
+
+              <div class="chat-all__left d-flex align-items-end mt-2 pb-3">
+                <img class="rounded-circle" src="img/bey.img" alt="aka Ibrohim" width="35" height="35">
+                <div class="chat-all__write bg-white p-2 rounded ml-2 position-relative">
+                  <h3 class="chat-all__write-name  h6 mb-0 text-primary">Asadbek aka NT</h3>
+                  <div class="d-flex align-items-end justify-content-between w-100">
+                    <p class="chat-all__write-text mb-0 pt-1">Ketiiikmi...</p>
+                  <time class="chat__time ml-5">11:38</time>
+                  </div>
+                  <span class="triangle position-absolute"></span>
+              </div>
+            </div>
+
+                  </div>
+              </div>
+              <div class="message__bottom">
+                <form class="message__form d-flex align-items-center w-100" action="https://echo.htmlacademy.ru" method="POST" autocomplete="off">
+                  <div class="message__bottom-wrapper d-flex align-items-center p-1 w-100">
+                    <label class="message__attach-file-label mb-0 d-flex">
+                      <input class="form-control message__attach-file-input sr-only" type="file"
+                       name="attached-file">
+                      <span class="message__attach-control"></span>
+                    </label>
+                    <input class="form-control message__input-msg flex-grow-1 mx-2 border-0" type="text" name="text-sms"
+                    placeholder="Write a message ...">
+                    <button class="btn message__smile" type="button"></button>
+                    <button class="btn message__send-btn" type="button"></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+              </div>
+            </div>
       </div>
 
-      <div class="col-6 bg-primary"></div>
-      <div class="col-3 bg-warning"></div>
 
+            <div class="col-3 border-left">
+              <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link border-0 show active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">EMOJIES</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link border-0 text-secondary" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">STICKERS</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link border-0 text-secondary" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">GIFs</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <ul class="emoji-list list-unstyled d-flex flex-wrap px-3 pt-2">
+                    <li class="emoji-item mr-3">
+                      😂
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      🤣
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😀
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😊
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😎
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😑
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😋
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😏
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😍
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      🤔
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😆
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😣
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😅
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😴
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😋
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😏
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😍
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      🤔
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😆
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😣
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😅
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      😴
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      🥵
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      🤑
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      🤐
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      🥶
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      🤯
+                    </li>
+                    <li class="emoji-item mr-3 mb-3">
+                      🥳
+                    </li>
+                    <li>
+                    <p class="mb-0 text-secondary">People</p>
+                    <ul class="emoji-list list-unstyled d-flex flex-wrap pt-2">
+                      <li class="emoji-item mr-3">
+                        😂
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🤣
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😀
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😊
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😎
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😑
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😋
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😏
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😍
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🤔
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😆
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😣
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😅
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😴
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😋
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😏
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😍
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🤔
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😆
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😣
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😅
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        😴
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🥵
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🤑
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🤐
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🥶
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🤯
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🥳
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        👍
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🤷‍♂️
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        ✌
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🎁
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        🐱‍👤
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                        💋
+                      </li>
+                      <li class="emoji-item mr-3 mb-3">
+                          <li class="emoji-item mr-3">
+                            😂
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤣
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😀
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😊
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😎
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😑
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😋
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😏
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😍
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤔
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😆
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😣
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😅
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😴
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😋
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😏
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😍
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤔
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😆
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😣
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😅
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😴
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🥵
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤑
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤐
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🥶
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤯
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🥳
+                          </li
+                          <li class="emoji-item mr-3 mb-3">
+                            😆
+                          </li>
+
+                          <li class="emoji-item mr-3 mb-3">
+                            😴
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😋
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😏
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😍
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤔
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😆
+                          </li>
+
+                          <li class="emoji-item mr-3 mb-3">
+                            😅
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            😴
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🥵
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤑
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤐
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🥶
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤯
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🥳
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            👍
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🤷‍♂️
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            ✌
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🎁
+                          </li>
+                          <li class="emoji-item mr-3 mb-3">
+                            🐱‍👤
+                          </li>
+
+                          <li class="emoji-item mr-3 mb-3">
+                              <li class="emoji-item mr-3">
+                                😂
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                🤣
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😀
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😊
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😎
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😑
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😋
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😏
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😍
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                🤔
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😆
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😣
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😅
+                              </li>
+                              <li class="emoji-item mr-3 mb-3">
+                                😴
+                              </li>
+                              <li class="emoji-item mr-3 mb-3"
+                          </li>
+                      </ul>
+                  </li>
+
+                  </ul>
+                </div>
+                <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+                </div>
+                <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">...</div>
+              </div>
+            </div>
+          </div>
     </div>
-  </div>
+  </main>
 
   <div class="modal fade show" id="exampleModal">
     <div class="modal-dialog">
@@ -193,7 +868,19 @@
           </div>
           <div class="d-flex flex-column justify-content-between align-items-center">
             <img class="bg-dark rounded-pill p-2" src="img/saved-meassagw-white.svg" alt="saved message" width="40" height="40">
-            <button class="arrow__bottom btn mt-4" aria-hidden="true"></button>
+            <button class="arrow__bottom btn mt-4" aria-hidden="true" data-toggle="collapse" data-target="#collapseExample"></button>
+          </div>
+        </div>
+        <div class="collapse" id="collapseExample">
+          <div class="card card-body">
+            <div class="d-flex align-items-center">
+              <img class="d-block rounded-circle" src="img/my-img.png" alt="my img" width="35" height="35">
+              <p class="ml-3 mb-0">Sarvar</p>
+            </div>
+            <div class="d-flex align-items-center mt-3">
+              <img src="img/account-icon.svg" alt="" width="30" height="30">
+              <p class="ml-3 mb-0">Add new account</p>
+            </div>
           </div>
         </div>
         <div class="modal-body border-0 vh-100">
@@ -204,8 +891,8 @@
             <a href="#" class="sitebar sitebar--call list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">Calls</a>
             <a href="#" class="sitebar sitebar--setting list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">Settings</a>
 
-            <div class="d-flex align-items-center">
-              <a href="#" class="sitebar sitebar--mode list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">Night Mode</a>
+            <div class="d-flex align-items-center position-relative">
+              <a href="#" class="sitebar sitebar--mode list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center stretched-link">Night Mode</a>
             <div class="custom-control custom-switch">
               <input type="checkbox" class="custom-control-input" id="customSwitch1">
               <label class="custom-control-label" for="customSwitch1"></label>
@@ -221,8 +908,100 @@
     </div>
   </div>
 
+  <div class="info-modal modal fade show" id="infoModal">
+    <div class="info-modal__dialog modal-dialog">
+      <div class="info-modal__contet modal-content d-block my-3">
+        <div class="info-modal__header modal-header border-0">
+          <div class="d-flex align-items-center justify-content-between w-100">
+            <h3 class="h6 mb-0">Chanel info</h3>
+            <div>
+              <button class="modal-btn__dot btn" aria-hidden="true"></button>
+            <button class="modal-btn__close btn" aria-hidden="true"></button>
+            </div>
+            </div>
+          </div>
+            <div class="modal__top d-flex p-3 align-items-center">
+              <img class="rounded-circle" src="img/uzkiy.jpg" alt="Gropu avatar photo" width="65" height="65">
+              <div class="ml-3">
+                <h3 class="h6 mb-0">Uzkiy Krug</h3>
+                <span class="text-secondary">4 members</span>
+              </div>
+            </div>
+            <div class="notification__modal list-group p-3">
+              <div class="d-flex align-items-center">
+              <a href="#" class="sitebar sitebar--notification list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center" aria-current="true">New Group</a>
+              <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                <label class="custom-control-label" for="customSwitch1"></label>
+              </div>
+            </div>
+            </div>
+
+
+        <div class="info-modal__list modal-body border-0">
+          <div class="list-group">
+            <a href="#" class="sitebar sitebar--photo list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center" aria-current="true">101 Photos</a>
+            <a href="#" class="sitebar sitebar--video list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">7 Videos</a>
+            <a href="#" class="sitebar sitebar--link list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">23 Shared links</a>
+            <a href="#" class="sitebar sitebar--voice list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">42 voice messages</a>
+            <a href="#" class="sitebar sitebar--gif list-group-item list-group-item-action border-0 p-2 pt-1 d-flex align-items-center">137 GIFs</a>
+          </div>
+        </div>
+        <div class="modal-footer d-block">
+          <div class="d-flex justify-content-between p-2 mb-2">
+            <button class="modal-icon__btn-person btn d-flex p-0 font-weight-bold">
+              4MEMBERS
+            </button>
+            <button class="modal-btn__userplus btn" aria-hidden="true"></button>
+          </div>
+          <div class="list-group">
+            <a class="list-group-item border-0 text-decoration-none text-dark mb-2" href="#">
+              <div class="d-flex">
+                <img class="rounded-circle" src="img/my-img.png" alt="My avatar" width="40" height="40">
+                <div class="ml-3">
+                  <h3 class="h6 mb-0">Sarvar</h3>
+                  <span class="status text-primary">Online</span>
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item border-0 text-decoration-none text-dark mb-2" href="#">
+              <div class="d-flex">
+                <img class="rounded-circle" src="img/ibrohimaka-img.jpg" alt="Ibrohim aka" width="40" height="40">
+                <div class="ml-3">
+                  <h3 class="h6 mb-0">Ibrohim aka NT</h3>
+                  <span class="status text-secondary">Last seen racendly</span>
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item border-0 text-decoration-none text-dark mb-2" href="#">
+              <div class="d-flex">
+                <img class="rounded-circle" src="img/nurmuhammadaka-img.jpg" alt="Nurmuhammad brat" width="40" height="40">
+                <div class="ml-3">
+                  <h3 class="h6 mb-0">Nurmuhammad aka NT</h3>
+                  <span class="status text-secondary">Last seen racendly</span>
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item border-0 text-decoration-none text-dark" href="#">
+              <div class="d-flex">
+                <img class="rounded-circle" src="img/bey.img" alt="Bey aka" width="40" height="40">
+                <div class="ml-3">
+                  <h3 class="h6 mb-0">Asadbek aka NT</h3>
+                  <span class="status text-primary">Online</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
 <script src="js/jquery-3.6.0.min.js"></script>
 <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
+
 </body>
 </html>
